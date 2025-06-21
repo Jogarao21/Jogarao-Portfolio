@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jogarao Portfolio</title>
+<style>
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+ body{
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background:linear-gradient(skyblue, lightgreen);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+   }       
+        header{
+            text-align: center;
+            padding: 20px 0;
+
+            border-bottom: solid black;
+            background:linear-gradient(rgb(96, 179, 72), white);
+        }
+       nav{
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+        nav a{
+             text-decoration: none;
+             color: rgb(21, 19, 19);
+             font-weight: 500;
+             margin-right: 15px;
+             transition: all 0.3s ease;
+             position: relative;
+             
+        }
+        nav a:hover{
+            color: hsl(161, 83%, 49%);
+            transform: translateY(-2px);
+        }
+        nav a::after{
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 2px;
+          bottom: -5px;
+          left: 0;
+          background: linear-gradient(45deg, #667eea, #764ba2);
+          transition: width 0.3s ease;
+        }
+        nav a:hover::after {
+            width: 100%;
+        }
+        section{
+            padding: 40px 20px;
+            max-width:900px;
+            background-color: aquamarine;
+            margin: auto;
+        }
+        h2{
+            text-align: center;
+            margin-top: -25px;
+            margin-bottom: 20px;
+        }
+        .about, .skills, .experience, .projects, .contact{
+            background-color: rgb(234, 235, 235);
+            margin-bottom: 20px;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: rgb(0, 0, 0);
+        }
+        .skills button{
+            margin-right: 10px;
+            background-color: rgb(247, 27, 218);
+            color: rgb(255, 255, 255);
+            border-style: solid;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            align-items: center;
+            cursor: pointer;
+            height: 25px;
+            width: 60px;
+            border-width: 1px;
+        }
+         .skill-description {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      padding: 10px;
+      background-color: #58ada0;
+      border-left: 4px solid rgb(197, 17, 155);
+      border-radius: 6px;
+      
+    }
+    .projects-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .project-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 260px;
+}
+
+.project-card h3 {
+  color: #ca2bad;
+  margin-bottom: 10px;
+}
+
+.project-card a {
+  color: #2116ee;
+  
+}
+mark{
+  background: rgb(8, 166, 209);
+}
+footer{
+  background:linear-gradient(white,  rgb(96, 179, 72));
+  text-align: center;
+  padding: 20px 0;
+  border-top: solid black;
+  color: rgb(7, 6, 6);
+  margin-top: -20px;       
+}
+    </style>
+</head>
+<body>
+    <header>
+        
+        <h1>Kappa Jogarao</h1>
+        <p>Frontend Developer | Python Enthusiast</p>
+        <nav>
+            <a href="#about">About </a>
+            <a href="#about">Skills</a>
+            <a href="#about">projects</a>
+            <a href="#about">Contact</a>
+        </nav>
+        
+    </header>
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Aspiring Full Stack Developer with hands-on experience in SQL, Python, and Frontend technologies. Skilled in developing responsive web applications using HTML, CSS, JavaScript, and building dynamic backend systems with Python. Proficient in writing efficient SQL queries for data manipulation and retrieval. Quick learner, team player, and currently enhancing skills through a Python Full Stack Development course at Besant Technologies. Passionate about building scalable and user-friendly applications.</p>
+    
+    </section>
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <button onclick="showskill('html')">HTML</button>
+        <button onclick="showskill('css')">CSS</button>
+        <button onclick="showskill('js')">JS</button>
+        <button onclick="showskill('reactjs')">React JS</button>
+        <button onclick="showskill('python')">PYTHON</button>
+        <button onclick="showskill('django')">DJANGO</button>
+        <button onclick="showskill('mysql')">MySQL</button>
+        <div id="skill-description" class="skill-description"></div>
+        <p>
+            <mark>Technical Skills:</mark>
+            <ul>
+                <li>Skilled in HTML, CSS, JavaScript, responsive design, git hub and deploying full-stack apps.</li>  
+                <li>Proficient in writing complex SQL queries, performing CRUD operations, and working with My SQL Workbench.</li>
+                <li>Skilled in Joins, Sub-queries, Views, Functions, and Normalization, familiar with DDL, DML, TCL, DCL, DQL, and ER Diagrams.</li>
+                <li><strong>Tools</strong>: VS Code, PyCharm, GitHub, Google Colab, Django, Jupyter Notebook, MySQL Workbench.</li>
+            </ul>
+        </p>
+    </section>
+    <section id="experience" class="experience">
+        <h2>Experience</h2> 
+        <p>
+            <mark>Python Full Stack Development (In Progress)</mark>
+            <ul>
+                <li>Comprehensive training in front-end and back-end web development </li>
+                <li><strong>Technologies covered</strong>: Python, Django, HTML5, CSS3, JavaScript, MySQL </li>
+                <li>Gaining hands-on experience in building and deploying full-stack web applications </li>
+                <li>Focused on real-time project development, REST APIs, and database integration</li>
+            </ul>
+        </p>
+    </section>
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <!--P1-->
+            <div class="project-card">
+                <h3>To-Do List App</h3>
+                <p>A task manager built with HTML, CSS, and JavaScript. Allows users to add, delete, and complete tasks.</p>
+      <p><strong>Tech Used:</strong> HTML, CSS, JavaScript</p>
+      <a href="#" target="_blank" rel="noopener noreferrer">https://github.com/Jogarao21b</a>
+            </div>
+            <!--P2-->
+        <div class="project-card">
+      <h3>Weather App</h3>
+      <p>Displays real-time weather using a weather API. Developed using Python for backend logic.</p>
+      <p><strong>Tech Used:</strong> Python, API</p>
+      <a href="#" target="_blank" rel="noopener noreferrer">https://github.com/Jogarao21</a>
+    </div>
+    <!--P3-->
+    <div class="project-card">
+        <h3>Portfolio</h3>
+        <p>This website you're viewing! Showcases my skills, projects, and contact information.</p>
+      <p><strong>Tech Used:</strong> HTML, CSS, JavaScript</p>
+      <a href="#" target="_blank" rel="noopener noreferrer">https://github.com/Jogarao21</a>
+    </div>
+        </div>
+        
+    </section>
+    <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Mobile:+91-9100622933</p>
+    <p>Email: <a href="#">mjogarao21@gmail.com</a></p>
+    <p>LinkedIn: <a href="#" target="_blank">linkedin.com/in/shiva-jogarao</a></p>
+    <p>GitHub: <a href="#" target="_blank">https://github.com/Jogarao21</a></p>
+  </section>
+  <footer>
+    <p>I'm Hard Working, Quick  Learner, and A Great Team Player.</p>
+    <p>Currently Looking For Better Oppertunities.</p>
+    <p>&copy;2025 Kappa Jogarao. All rights reserved.</p>
+  </footer>
+</body>
+<script>
+  let activeSkill = null; // Track the currently active skill
+
+  function showskill(skill) {
+    const descriptions = {
+      html: "HTML is the standard markup language used to create the structure of web pages.",
+      css: "CSS is used to style HTML elements and make web pages visually appealing and responsive.",
+      js: "JavaScript adds interactivity and dynamic behavior to web pages.",
+      reactjs: "React JS is a JavaScript library for building user interfaces using a component-based approach.",
+      python: "Python is a versatile programming language great for web development, automation, and data analysis.",
+      django: "Django is a high-level Python web framework that promotes rapid development and clean design.",
+      mysql: "MySQL is a relational database management system used for storing and retrieving data efficiently."
+    };
+
+    const descriptionDiv = document.getElementById("skill-description");
+
+    // Toggle off if same button is clicked again
+    if (activeSkill === skill) {
+      descriptionDiv.innerText = "";
+      activeSkill = null;
+    } else {
+      descriptionDiv.innerText = descriptions[skill] || "Skill description not available.";
+      activeSkill = skill;
+    }
+  }
+</script>
+</html>
